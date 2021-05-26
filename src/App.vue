@@ -44,12 +44,19 @@
 </template>
 
 <script>
+import getBaseUrl from "./url"
 
 export default {
   name: 'App',
 
   data: () => ({
-    //
+    tutorials: []
   }),
+
+  mounted(){
+    fetch({ url: getBaseUrl() + "/tutorials.json"}).then(res => {
+      this.tutorials = res.json()
+    })
+  }
 };
 </script>

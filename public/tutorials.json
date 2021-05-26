@@ -1,0 +1,10 @@
+[
+    {
+        "name": "test",
+        "tags": ["programming", "C#", "ASP.NET"],
+        "description": "Test tutorial",
+        "thumbnail": "test.png",
+        "video": "test.mp4",
+        "article": "test.html"
+    }
+]
