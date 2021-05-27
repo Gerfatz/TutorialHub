@@ -45,6 +45,7 @@
 
 <script>
 import getBaseUrl from "./url"
+import axios from 'axios'
 
 export default {
   name: 'App',
@@ -53,10 +54,15 @@ export default {
     tutorials: []
   }),
 
+  methods: {
+    setTutorials(res){
+      this.tutorials = res.data;
+    }
+  },
+
   mounted(){
-    fetch({ url: getBaseUrl() + "/tutorials.json"}).then(res => {
-      this.tutorials = res.json()
-    })
+    axios.get(getBaseUrl() + '/tutorials.json')
+      .then(this.setTutorials)
   }
 };
 </script>
