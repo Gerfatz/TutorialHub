@@ -2,39 +2,30 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
+      color="blue lighten-1"
       dark
     >
-      <div class="d-flex align-center">
+      <div>
         <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
+          alt="Tutorial-Hub log"
+          class="ml-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src="/TutorialHub-logo.svg"
           transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
+          width="150"
+          height="75"
         />
       </div>
-
       <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+      <v-btn depressed x-large color="blue lighten-1">
+        <v-icon left color="white">mdi-home</v-icon>
+        Home
       </v-btn>
+      <v-btn depressed x-large color="blue lighten-1">
+        <v-icon left color="white">mdi-grid</v-icon>
+        Tutorials
+      </v-btn>
+      <v-spacer></v-spacer>
     </v-app-bar>
 
     <v-main>
