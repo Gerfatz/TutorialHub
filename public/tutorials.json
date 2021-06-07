@@ -1,10 +1,18 @@
 [
     {
         "name": "test",
-        "tags": ["programming", "C#", "ASP.NET"],
+        "tags": ["Programming", "C#", "ASP.NET"],
         "description": "Test tutorial",
         "thumbnail": "test.png",
         "video": "test.mp4",
         "article": "test.html"
+    },
+    {
+        "name": "test2",
+        "tags": ["Design", "3D", "Blender"],
+        "description": "Blender Basics",
+        "thumbnail": "blender.png",
+        "video": "blender.mp4",
+        "article": "blender.html"
     }
 ]

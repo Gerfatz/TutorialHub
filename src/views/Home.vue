@@ -7,5 +7,6 @@
 <script>
   export default {
     name: 'Home',
+    props: ['tutorials']
   }
 </script>
