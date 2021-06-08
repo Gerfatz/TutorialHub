@@ -49,7 +49,5 @@ export default {
   justify-content: center;
 }
 
-.app > div {
-  max-width: 90%;
-}
+
 </style>

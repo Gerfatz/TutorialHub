@@ -7,12 +7,17 @@ function getBaseUrl(){
     }
 }
 
+function getSrcSetPart(tutorial, size){
+    return getImageUrl(tutorial, size) + ' ' + size + 'w'
+}
+
 function getImageUrl(tutorial, size){
     let imageNameParts = tutorial.thumbnail.split('.')
-    return `/images/${imageNameParts[0]}-${size}.${imageNameParts[1]} ${size}w`
+    return `/images/${imageNameParts[0]}-${size}.${imageNameParts[1]}`
 }
 
 export {
     getBaseUrl,
+    getSrcSetPart,
     getImageUrl
 }

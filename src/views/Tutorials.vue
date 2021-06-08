@@ -3,7 +3,7 @@
       <h2>Tutorials</h2>
       <div class="tutorials-list">
           <v-card v-for="(tutorial, index) in tutorials" :key="index">
-              <img :srcset="getSrcSet(tutorial)" sizes="(max-width: 600px) 400px, 800px" :src="getSrc(tutorial)" :alt="'Thumbnail for Tutorial ' + tutorial.name"/>
+              <img :srcset="getSrcSet(tutorial)" sizes="(min-width: 600px) 50vw, (min-width: 1200px) 33vw, 100vw" :src="getSrc(tutorial)" :alt="'Thumbnail for Tutorial ' + tutorial.name"/>
               <v-card-title>{{tutorial.name}}</v-card-title>
               <v-card-text>{{tutorial.tags}}</v-card-text>
           </v-card>
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { getImageUrl } from '../url'
+import { getImageUrl, getSrcSetPart } from '../url'
 
 export default {
     name: 'Tutorials',
@@ -24,10 +24,10 @@ export default {
             let value = ""
 
             for(let size of sizes){
-                value += getImageUrl(tutorial, size) + ','
+                value += getSrcSetPart(tutorial, size) + ','
             }
 
-            return value.substring(0, value.length - 2)
+            return value.substring(0, value.length - 1)
         },
 
         getSrc(tutorial){
@@ -41,5 +41,11 @@ export default {
 .tutorials-list{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tutorials-list > img {
+    width: 100%;
+    height: auto;
 }
 </style>
