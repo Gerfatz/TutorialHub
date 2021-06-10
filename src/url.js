@@ -13,7 +13,7 @@ function getSrcSetPart(tutorial, size){
 
 function getImageUrl(tutorial, size){
     let imageNameParts = tutorial.thumbnail.split('.')
-    return `/images/${imageNameParts[0]}-${size}.${imageNameParts[1]}`
+    return `/content/images/${imageNameParts[0]}-${size}.${imageNameParts[1]}`
 }
 
 export {

@@ -1,4 +1,4 @@
-cd ../public/images
+cd ../public/content/images
 
 SIZES=('250' '400' '650' '800')
 

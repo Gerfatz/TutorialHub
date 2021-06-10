@@ -1,8 +1,17 @@
 <template>
   <div>
       <h2>Tutorials</h2>
+      <v-overlay v-if="currentTutorial">
+          <v-card light>
+            <v-card-title>{{currentTutorial.name}}</v-card-title>
+            <div class="flex">
+                <img class="overlay-image" :srcset="getSrcSet(currentTutorial)" :src="getSrc(currentTutorial)" :alt="'Thumbnail for Tutorial ' + currentTutorial.name"/>
+            </div>
+            <v-card-text>{{currentTutorial.description}}</v-card-text>
+          </v-card>
+      </v-overlay>
       <div class="tutorials-list">
-          <v-card v-for="(tutorial, index) in tutorials" :key="index">
+          <v-card class="tutorial" v-for="(tutorial, index) in tutorials" :key="index" @click="setTutorial(tutorial)">
               <img :srcset="getSrcSet(tutorial)" sizes="(min-width: 600px) 50vw, (min-width: 1200px) 33vw, 100vw" :src="getSrc(tutorial)" :alt="'Thumbnail for Tutorial ' + tutorial.name"/>
               <v-card-title>{{tutorial.name}}</v-card-title>
               <v-card-text>{{tutorial.tags}}</v-card-text>
@@ -17,7 +26,11 @@ import { getImageUrl, getSrcSetPart } from '../url'
 export default {
     name: 'Tutorials',
     props: ['tutorials'],
-
+    data: function() {
+        return {
+            currentTutorial: null
+        }
+    },
     methods: {
         getSrcSet(tutorial){
             const sizes = ['250', '400', '650', '800']
@@ -32,6 +45,10 @@ export default {
 
         getSrc(tutorial){
             return getImageUrl(tutorial, 800)
+        },
+
+        setTutorial(tutorial){
+            this.currentTutorial = tutorial
         }
     }
 }
@@ -48,4 +65,19 @@ export default {
     width: 100%;
     height: auto;
 }
+
+.tutorial {
+    cursor: pointer;
+}
+
+.overlay-image{
+    max-width: 800px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 </style>
