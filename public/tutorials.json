@@ -4,7 +4,7 @@
         "tags": ["Programming", "C#", "ASP.NET"],
         "description": "Test tutorial",
         "thumbnail": "test.png",
-        "video": "test.mp4",
+        "video": true,
         "article": "test.html"
     },
     {
@@ -12,7 +12,7 @@
         "tags": ["Design", "3D", "Blender"],
         "description": "Blender Basics",
         "thumbnail": "blender.png",
-        "video": "blender.mp4",
+        "video": true,
         "article": "blender.html"
     }
 ]

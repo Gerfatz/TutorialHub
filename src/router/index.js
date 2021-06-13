@@ -4,34 +4,48 @@ import Home from '../views/Home.vue'
 import axios from 'axios'
 import {getBaseUrl} from '../url'
 
-Vue.use(VueRouter)
 
-let tutorials = undefined
+function getRouter(tutorials){
+  Vue.use(VueRouter)
 
-axios.get(getBaseUrl() + '/tutorials.json')
-  .then(res => tutorials = res.data)
-
-
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home,
-    props: () => ({ tutorials: tutorials})
-  },
-  {
-    path: '/tutorials',
-    name: 'Tutorials',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Tutorials.vue'),
-    props: () => ({ tutorials: tutorials})
+  function getTutorial(route){
+    const tutorial = tutorials.filter(t => t.name == route.params.name)[0]
+    return {
+      tutorial: tutorial
+    }
   }
-]
 
-const router = new VueRouter({
-  routes
-})
+  const routes = [
+    {
+      path: '/',
+      name: 'Home',
+      component: Home,
+      props: () => ({ tutorials: tutorials})
+    },
+    {
+      path: '/tutorials',
+      name: 'Tutorials',
+      component: () => import('../views/Tutorials.vue'),
+      props: () => ({ tutorials: tutorials})
+    },
+    {
+      path: '/article/:name',
+      name: 'Article',
+      component: () => import('../views/Article.vue'),
+      props: getTutorial
+    },
+    {
+      path: '/video/:name',
+      name: 'Video',
+      component: () => import('../views/Video.vue'),
+      props: getTutorial
+    }
+  ]
 
-export default router
+  return new VueRouter({
+    routes
+  })
+
+}
+
+export default getRouter

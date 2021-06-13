@@ -8,7 +8,7 @@
       >
         <div>
           <v-img
-            alt="Tutorial-Hub log"
+            alt="Tutorial-Hub logo"
             class="ml-2"
             contain
             src="/TutorialHub-logo.svg"

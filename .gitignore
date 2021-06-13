@@ -22,7 +22,9 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-public/images/*-250.*
-public/images/*-400.*
-public/images/*-650.*
-public/images/*-800.*
+public/content/images/*-250.*
+public/content/images/*-400.*
+public/content/images/*-650.*
+public/content/images/*-800.*
+
+public/content/videos/*/*
