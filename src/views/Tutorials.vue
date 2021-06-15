@@ -9,7 +9,7 @@
                     <v-icon color="black" @click="currentTutorial = null">mdi-close</v-icon>
                 </div>
             </v-card-title>
-            <img class="overlay-image" :srcset="getSrcSet(currentTutorial)" :src="getSrc(currentTutorial)" :alt="'Thumbnail for Tutorial ' + currentTutorial.name"/>
+            <Image class="overlay-image" :tutorial="currentTutorial" :sizes="false" :alt="'Thumbnail for Tutorial ' + currentTutorial.name"></Image>
             <div class="ml-4">
                 <v-btn color="blue" v-if="currentTutorial.article" :to="'/article/' + currentTutorial.name" class="mr-2 white--text">
                     <v-icon left>mdi-script-text-outline</v-icon> Article Version
@@ -24,7 +24,7 @@
       </v-overlay>
       <div class="tutorials-list">
           <v-card class="tutorial mx-1" v-for="(tutorial, index) in tutorials" :key="index" @click="currentTutorial = tutorial">
-              <img :srcset="getSrcSet(tutorial)" sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw" :src="getSrc(tutorial)" :alt="'Thumbnail for Tutorial ' + tutorial.name"/>
+              <FImage :tutorial="tutorial" :sizes="true" :alt="'Thumbnail for Tutorial ' + tutorial.name"></FImage>
               <v-card-title>{{tutorial.name}}</v-card-title>
               <v-card-text>
                   <span v-for="(tag, j) in tutorial.tags" :key="j">
@@ -38,11 +38,14 @@
 </template>
 
 <script>
-import { getImageUrl, getSrcSetPart } from '../url'
+import FImage from '../components/FImage.vue'
 
 export default {
     name: 'Tutorials',
     props: ['tutorials'],
+    components: {
+        FImage
+    },
     data: function() {
         return {
             currentTutorial: null

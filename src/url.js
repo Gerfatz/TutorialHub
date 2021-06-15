@@ -16,6 +16,21 @@ function getImageUrl(tutorial, size){
     return `/content/images/${imageNameParts[0]}-${size}.${imageNameParts[1]}`
 }
 
+function getSrcSet(tutorial){
+    const sizes = ['250', '400', '650', '800']
+    let value = ""
+
+    for(let size of sizes){
+        value += getSrcSetPart(tutorial, size) + ','
+    }
+
+    return value.substring(0, value.length - 1)
+}
+
+function getSrc(tutorial){
+    return getImageUrl(tutorial, 800)
+}
+
 export {
     getBaseUrl,
     getSrcSetPart,

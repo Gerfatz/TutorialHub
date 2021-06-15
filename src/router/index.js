@@ -15,12 +15,29 @@ function getRouter(tutorials){
     }
   }
 
+  function getRandomTutorials(){
+    debugger;
+    let selected = []
+    let indecies = []
+    let rand = undefined
+    for (let i = 0; i < 2; i++){
+      while (rand === undefined || indecies.indexOf(rand) != -1){
+        rand = Math.floor(Math.random() * tutorials.length)
+      }
+      selected.push(tutorials[rand])
+      indecies.push(rand)
+    }
+    return {
+      tutorials: selected
+    }
+  }
+
   const routes = [
     {
       path: '/',
       name: 'Home',
       component: Home,
-      props: () => ({ tutorials: tutorials})
+      props: getRandomTutorials
     },
     {
       path: '/tutorials',
