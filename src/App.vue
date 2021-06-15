@@ -30,7 +30,11 @@
       </v-app-bar>
 
       <v-main>
-        <router-view/>
+        <v-row justify="center" class="mx-3">
+          <v-col cols="12" md="10" xl="8">
+            <router-view/>
+          </v-col>
+        </v-row>
       </v-main>
     </div>
   </v-app>

@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h2>Tutorials</h2>
+      <h1 class="mt-5 mb-3">Tutorials</h1>
       <v-overlay v-if="currentTutorial">
           <v-card light>
             <v-card-title>
@@ -23,8 +23,8 @@
           </v-card>
       </v-overlay>
       <div class="tutorials-list">
-          <v-card class="tutorial" v-for="(tutorial, index) in tutorials" :key="index" @click="currentTutorial = tutorial">
-              <img :srcset="getSrcSet(tutorial)" sizes="(min-width: 600px) 50vw, (min-width: 1200px) 33vw, 100vw" :src="getSrc(tutorial)" :alt="'Thumbnail for Tutorial ' + tutorial.name"/>
+          <v-card class="tutorial mx-1" v-for="(tutorial, index) in tutorials" :key="index" @click="currentTutorial = tutorial">
+              <img :srcset="getSrcSet(tutorial)" sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw" :src="getSrc(tutorial)" :alt="'Thumbnail for Tutorial ' + tutorial.name"/>
               <v-card-title>{{tutorial.name}}</v-card-title>
               <v-card-text>
                   <span v-for="(tag, j) in tutorial.tags" :key="j">

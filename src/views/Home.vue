@@ -1,7 +1,7 @@
 <template>
-  <v-container>
-    <p>Hello</p>
-  </v-container>
+  <div>
+    <h1 class="text-center mt-5">Welcome to TutorialHub</h1>
+  </div>
 </template>
 
 <script>
@@ -10,3 +10,6 @@
     props: ['tutorials']
   }
 </script>
+
+<style>
+</style>
