@@ -14,5 +14,22 @@
         "thumbnail": "blender.png",
         "video": true,
         "article": "blender.html"
+    },
+    {
+        "name": "How to close a fridge",
+        "tags": ["Lifehacks", "Kitchen"],
+        "description": "This tutorials explains how to close a fridge. What might seem like a simple task at first, can turn out to be a very difficult challange indeed. If a Fridge is not closed correctly, it could be that cold air inside can escape and the fridge consumes more power trying to keep the temperature low, or the fridge can't keep up at all and the food inside gets warm and begins to rot. Not closing the fridge correctly can also annoy your roommates, because they would have to poor warm milk into their ceral in the morning. So better take this quick tutorial first and prevent this from happening",
+        "thumbnail": "FridgeClose.png",
+        "video": true,
+        "article": "how_to_close_a_fridge.html"
+    },
+    {
+        "name": "How to make a tutorial",
+        "tags": ["Office", "Word", "Tutorials"],
+        "description": "Have you wondered how to make a really good tutorial? Yes or no you should definetely take this short tutorial on how to make a tutorial. Tutorials about tutorials are rare, but it is important that you know how to make a tutorial when you want to make tutorial. RECURSION ERROR",
+        "thumbnail": "Word_format.png",
+        "video": true,
+        "article": "how_to_make_a_tutorial.html"
     }
+
 ]

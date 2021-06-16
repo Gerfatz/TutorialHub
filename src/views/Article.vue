@@ -1,6 +1,5 @@
 <template>
-  <div v-if="tutorial" class="mx-md-16">
-      <h2>{{tutorial.name}}</h2>
+  <div v-if="tutorial" class="mt-3">
       <div v-html="content"></div>
   </div>
 </template>
@@ -26,7 +25,7 @@ export default {
     },
 
     mounted(){
-        axios.get(getBaseUrl() + '/content/articles/' + this.tutorial.name + '.html').
+        axios.get(getBaseUrl() + '/content/articles/' + this.tutorial.article).
             then(this.setContent)
     }
 }
