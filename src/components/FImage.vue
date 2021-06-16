@@ -1,6 +1,5 @@
 <template>
-  <img v-if="sizes" :srcset="getSrcSet(tutorial)" sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw" :src="getSrc(tutorial)" :alt="'Thumbnail for Tutorial ' + tutorial.name"/>
-  <img v-else :srcset="getSrcSet(tutorial)" :src="getSrc(tutorial)" :alt="alt"/>
+  <img :srcset="getSrcSet(tutorial)" sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw" :src="getSrc(tutorial)" :alt="'Thumbnail for Tutorial ' + tutorial.name"/>
 </template>
 
 <script>
@@ -8,7 +7,7 @@ import { getImageUrl, getSrcSetPart } from '../url'
 
 export default {
     name: "FImage",
-    props: ["tutorial", "alt", "sizes"],
+    props: ["tutorial", "alt"],
     methods: {
         getSrcSet(tutorial){
             const sizes = ['250', '400', '650', '800']

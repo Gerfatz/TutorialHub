@@ -7,7 +7,7 @@
           <v-carousel :cycle="true" class="carousel">
             <v-carousel-item v-for="(tutorial, index) in tutorials" to="/tutorials" :key="index" class="justify-center">
               <h3>{{tutorial.name}}</h3>
-              <FImage :tutorial="tutorial" :sizes="false" :alt="'Thumbnail for Tutorial: ' + tutorial.name"></FImage>
+              <img :src="'content/images/o_' + tutorial.thumbnail" :alt="'Thumbnail for Tutorial: ' + tutorial.name"/>
             </v-carousel-item>
           </v-carousel>
         </v-card>

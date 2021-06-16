@@ -7,7 +7,7 @@
                 <p class="my-2">{{currentTutorial.name}}</p>
                 <v-icon color="black" @click="currentTutorial = null">mdi-close</v-icon>
             </v-card-title>
-            <FImage class="overlay-image" :tutorial="currentTutorial" :sizes="false" :alt="'Thumbnail for Tutorial ' + currentTutorial.name"></FImage>
+            <img class="overlay-image" :src="'content/images/o_' + currentTutorial.thumbnail" :alt="'Thumbnail for Tutorial ' + currentTutorial.name"/>
             <div class="ml-4 mt-2">
                 <v-btn color="blue" v-if="currentTutorial.article" :to="'/article/' + currentTutorial.name" class="mr-2 white--text">
                     <v-icon left>mdi-script-text-outline</v-icon> Article Version
@@ -22,7 +22,7 @@
       </v-overlay>
       <div class="tutorials-list">
           <v-card class="tutorial mx-1" v-for="(tutorial, index) in tutorials" :key="index" @click="currentTutorial = tutorial">
-              <FImage :tutorial="tutorial" :sizes="true" :alt="'Thumbnail for Tutorial ' + tutorial.name"></FImage>
+              <FImage :tutorial="tutorial" :alt="'Thumbnail for Tutorial ' + tutorial.name"></FImage>
               <v-card-title>{{tutorial.name}}</v-card-title>
               <v-card-text>
                   <span v-for="(tag, j) in tutorial.tags" :key="j">
