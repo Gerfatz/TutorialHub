@@ -20,16 +20,30 @@
         "tags": ["Lifehacks", "Kitchen"],
         "description": "This tutorials explains how to close a fridge. What might seem like a simple task at first, can turn out to be a very difficult challange indeed. If a Fridge is not closed correctly, it could be that cold air inside can escape and the fridge consumes more power trying to keep the temperature low, or the fridge can't keep up at all and the food inside gets warm and begins to rot. Not closing the fridge correctly can also annoy your roommates, because they would have to poor warm milk into their ceral in the morning. So better take this quick tutorial first and prevent this from happening",
         "thumbnail": "FridgeClose.png",
-        "video": true,
+        "video": false,
         "article": "how_to_close_a_fridge.html"
     },
     {
         "name": "How to make a tutorial",
         "tags": ["Office", "Word", "Tutorials"],
-        "description": "Have you wondered how to make a really good tutorial? Yes or no you should definetely take this short tutorial on how to make a tutorial. Tutorials about tutorials are rare, but it is important that you know how to make a tutorial when you want to make tutorial. RECURSION ERROR",
+        "description": "Have you wondered how to make a really good tutorial? Either way you should definetely take this short tutorial on how to make a tutorial. Tutorials about tutorials are rare, but it is important that you know how to make a tutorial when you want to make tutorial. RECURSION ERROR",
         "thumbnail": "Word_format.png",
-        "video": true,
+        "video": false,
         "article": "how_to_make_a_tutorial.html"
+    },
+    {
+        "name": "How to make an epic birthday suprise",
+        "tags": ["Birthday", "Suprise", "Video"],
+        "description": "Has someone you know been born once? Boy, do we have some great news for you! By following our video tutorial, you can learn on how to REALLY suprise your friends/fiends.",
+        "thumbnail": "o_birthday_present.jpg",
+        "video": true
+    },
+    {
+        "name": "How to make a mcchicken",
+        "tags": ["Mcchicken", "Cooking", "Video"],
+        "description": "Do you like McChickens? Or just burgers in general, really... no? Seriously? What is wrong with you?",
+        "thumbnail": "o_mcchicken.jpg",
+        "video": true
     }
 
 ]
