@@ -2,15 +2,13 @@
   <div>
       <h1 class="mt-5 mb-3">Tutorials</h1>
       <v-overlay v-if="currentTutorial">
-          <v-card light>
-            <v-card-title>
-                <div class="d-flex justify-space-between">
-                    <p>{{currentTutorial.name}}</p>
-                    <v-icon color="black" @click="currentTutorial = null">mdi-close</v-icon>
-                </div>
+        <v-card light class="py-2">
+            <v-card-title class="justify-space-between">
+                <p class="my-2">{{currentTutorial.name}}</p>
+                <v-icon color="black" @click="currentTutorial = null">mdi-close</v-icon>
             </v-card-title>
-            <Image class="overlay-image" :tutorial="currentTutorial" :sizes="false" :alt="'Thumbnail for Tutorial ' + currentTutorial.name"></Image>
-            <div class="ml-4">
+            <FImage class="overlay-image" :tutorial="currentTutorial" :sizes="false" :alt="'Thumbnail for Tutorial ' + currentTutorial.name"></FImage>
+            <div class="ml-4 mt-2">
                 <v-btn color="blue" v-if="currentTutorial.article" :to="'/article/' + currentTutorial.name" class="mr-2 white--text">
                     <v-icon left>mdi-script-text-outline</v-icon> Article Version
                 </v-btn>
@@ -19,8 +17,8 @@
                     Video Version
                 </v-btn>
             </div>
-            <v-card-text>{{currentTutorial.description}}</v-card-text>
-          </v-card>
+            <p class="text-wrap mx-4 my-3">{{currentTutorial.description}}</p>
+        </v-card>
       </v-overlay>
       <div class="tutorials-list">
           <v-card class="tutorial mx-1" v-for="(tutorial, index) in tutorials" :key="index" @click="currentTutorial = tutorial">
@@ -50,22 +48,6 @@ export default {
         return {
             currentTutorial: null
         }
-    },
-    methods: {
-        getSrcSet(tutorial){
-            const sizes = ['250', '400', '650', '800']
-            let value = ""
-
-            for(let size of sizes){
-                value += getSrcSetPart(tutorial, size) + ','
-            }
-
-            return value.substring(0, value.length - 1)
-        },
-
-        getSrc(tutorial){
-            return getImageUrl(tutorial, 800)
-        }
     }
 }
 </script>
@@ -88,6 +70,11 @@ export default {
 
 .overlay-image{
     max-width: 800px;
+}
+
+.text-wrap{
+    max-width: 750px;
+    overflow-wrap: break-word;
 }
 
 

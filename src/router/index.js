@@ -16,11 +16,10 @@ function getRouter(tutorials){
   }
 
   function getRandomTutorials(){
-    debugger;
     let selected = []
     let indecies = []
     let rand = undefined
-    for (let i = 0; i < 2; i++){
+    for (let i = 0; i < 3; i++){
       while (rand === undefined || indecies.indexOf(rand) != -1){
         rand = Math.floor(Math.random() * tutorials.length)
       }
@@ -56,6 +55,11 @@ function getRouter(tutorials){
       name: 'Video',
       component: () => import('../views/Video.vue'),
       props: getTutorial
+    },
+    {
+      path: '/impressum',
+      name: 'Impressum',
+      component: () => import('../views/Impressum.vue')
     }
   ]
 

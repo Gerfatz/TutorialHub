@@ -11,7 +11,7 @@
             alt="Tutorial-Hub logo"
             class="ml-2"
             contain
-            src="/TutorialHub-logo.svg"
+            :src="logo_url"
             transition="scale-transition"
             width="150"
             height="75"
@@ -37,13 +37,23 @@
         </v-row>
       </v-main>
     </div>
+    <v-footer class="justify-center">
+      <p>&copy; {{new Date().year}} Dario Camenzind, Benjamin Zoronjic | <router-link class="ml-1" to="/Impressum">Impressum</router-link></p>
+    </v-footer>
   </v-app>
 </template>
 
 <script>
+import { getBaseUrl } from './url'
+
 
 export default {
   name: 'App',
+  computed: {
+    logo_url(){
+      return getBaseUrl() + "/TutorialHub-logo.svg"
+    }
+  }
 };
 </script>
 
@@ -52,6 +62,4 @@ export default {
   display: flex;
   justify-content: center;
 }
-
-
 </style>

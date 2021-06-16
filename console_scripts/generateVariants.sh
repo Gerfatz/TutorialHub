@@ -1,6 +1,4 @@
 #!/bin/bash
-# Create output directory 'dash' (if not exists)
-cd ../public/content/videos
 
 # Define sizes for video variants.
 # Format: width:height:bitrate

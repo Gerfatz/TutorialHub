@@ -5,7 +5,8 @@
       <v-col cols="11" md="8" xl="6">
         <v-card max-width="800">
           <v-carousel :cycle="true" class="carousel">
-            <v-carousel-item v-for="(tutorial, index) in tutorials" :key="index" class="justify-center">
+            <v-carousel-item v-for="(tutorial, index) in tutorials" to="/tutorials" :key="index" class="justify-center">
+              <h3>{{tutorial.name}}</h3>
               <FImage :tutorial="tutorial" :sizes="false" :alt="'Thumbnail for Tutorial: ' + tutorial.name"></FImage>
             </v-carousel-item>
           </v-carousel>
@@ -32,5 +33,11 @@
 .carousel img{
   height: 100%;
   width: 100%;
+}
+
+.carousel h3 {
+  text-align: center;
+  background-color: #42A5F5;
+  color: white;
 }
 </style>

@@ -4,7 +4,7 @@
         "tags": ["Programming", "C#", "ASP.NET"],
         "description": "Test tutorial",
         "thumbnail": "test.png",
-        "video": true,
+        "video": "test",
         "article": "test.html"
     },
     {
@@ -12,7 +12,7 @@
         "tags": ["Design", "3D", "Blender"],
         "description": "Blender Basics",
         "thumbnail": "blender.png",
-        "video": true,
+        "video": false,
         "article": "blender.html"
     },
     {
@@ -35,15 +35,15 @@
         "name": "How to make an epic birthday suprise",
         "tags": ["Birthday", "Suprise", "Video"],
         "description": "Has someone you know been born once? Boy, do we have some great news for you! By following our video tutorial, you can learn on how to REALLY suprise your friends/fiends.",
-        "thumbnail": "o_birthday_present.jpg",
-        "video": true
+        "thumbnail": "birthday_present.png",
+        "video": "present"
     },
     {
         "name": "How to make a mcchicken",
         "tags": ["Mcchicken", "Cooking", "Video"],
         "description": "Do you like McChickens? Or just burgers in general, really... no? Seriously? What is wrong with you?",
-        "thumbnail": "o_mcchicken.jpg",
-        "video": true
+        "thumbnail": "mcchicken.jpg",
+        "video": "mcchicken"
     }
 
 ]

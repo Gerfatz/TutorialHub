@@ -2,7 +2,13 @@
   <v-row justify="center" class="mt-5">
       <v-col cols="11" md="8">
         <video controls autoplay ref="player" class="video"></video>
-        <h2>{{tutorial.name}}</h2>
+        <div class="d-flex justify-space-between">
+            <h2>{{tutorial.name}}</h2>
+            <v-btn color="blue" v-if="tutorial.article" :to="'/article/' + tutorial.name" class="mr-2 white--text">
+                    <v-icon left>mdi-script-text-outline</v-icon> Article Version
+            </v-btn>
+        </div>
+        <p class="mt1">{{tutorial.description}}</p>
       </v-col>
   </v-row>
 </template>
@@ -16,7 +22,7 @@ export default {
     props: ['tutorial'],
     computed: {
         src(){
-            return getBaseUrl() + '/content/videos/' + this.tutorial.name + '/manifest.mpd'
+            return getBaseUrl() + '/content/videos/' + this.tutorial.video + '/manifest.mpd'
         }
     },
     mounted(){

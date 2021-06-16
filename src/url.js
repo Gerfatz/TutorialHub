@@ -3,7 +3,7 @@ function getBaseUrl(){
         return 'http://' + location.host
     }
     else{
-        return "https://m152.gibz-informatik.ch/sj_20_21/infa3a_04/"
+        return "https://m152.gibz-informatik.ch/sj_20_21/infa3a_17"
     }
 }
 
@@ -13,22 +13,7 @@ function getSrcSetPart(tutorial, size){
 
 function getImageUrl(tutorial, size){
     let imageNameParts = tutorial.thumbnail.split('.')
-    return `/content/images/${imageNameParts[0]}-${size}.${imageNameParts[1]}`
-}
-
-function getSrcSet(tutorial){
-    const sizes = ['250', '400', '650', '800']
-    let value = ""
-
-    for(let size of sizes){
-        value += getSrcSetPart(tutorial, size) + ','
-    }
-
-    return value.substring(0, value.length - 1)
-}
-
-function getSrc(tutorial){
-    return getImageUrl(tutorial, 800)
+    return `${getBaseUrl()}/content/images/${imageNameParts[0]}-${size}.${imageNameParts[1]}`
 }
 
 export {
