@@ -1,5 +1,5 @@
 <template>
-  <img :srcset="getSrcSet(tutorial)" sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw" :src="getSrc(tutorial)" :alt="'Thumbnail for Tutorial ' + tutorial.name"/>
+  <img class="f-image" :srcset="getSrcSet(tutorial)" sizes="(max-width: 600px) 100vw, (max-width: 960px) 40vw, 25vw" :src="getSrc(tutorial)" :alt="'Thumbnail for Tutorial ' + tutorial.name"/>
 </template>
 
 <script>
@@ -28,5 +28,7 @@ export default {
 </script>
 
 <style>
-
+.f-image{
+    max-width: 100%;
+}
 </style>

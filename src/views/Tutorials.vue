@@ -21,7 +21,7 @@
         </v-card>
       </v-overlay>
       <div class="tutorials-list">
-          <v-card class="tutorial mx-1" v-for="(tutorial, index) in tutorials" :key="index" @click="currentTutorial = tutorial">
+          <v-card class="tutorial mx-1 my-1" v-for="(tutorial, index) in tutorials" :key="index" @click="currentTutorial = tutorial">
               <FImage :tutorial="tutorial" :alt="'Thumbnail for Tutorial ' + tutorial.name"></FImage>
               <v-card-title>{{tutorial.name}}</v-card-title>
               <v-card-text>
@@ -53,6 +53,7 @@ export default {
 </script>
 
 <style>
+
 .tutorials-list{
     display: flex;
     justify-content: center;
@@ -69,7 +70,7 @@ export default {
 }
 
 .overlay-image{
-    max-width: 800px;
+    max-width: 95vw;
 }
 
 .text-wrap{
