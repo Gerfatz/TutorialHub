@@ -13,7 +13,8 @@
         </v-card>
       </v-col>
     </v-row>
-    <p><!--About Section here--></p>
+    <h1>About us.</h1>
+    <p>Hi there! We're a small multi-trillion dollar company that preys on the weak by profiting of their lack of basic knowledge. On our site, you can learn important skills, such as "How to open a fridge" or "How to make a suprise birthday present". We know where you live. (Also, this site is very satire)</p>
   </div>
 </template>
 
