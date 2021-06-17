@@ -7,7 +7,7 @@
                 <p class="my-2">{{currentTutorial.name}}</p>
                 <v-icon color="black" @click="currentTutorial = null">mdi-close</v-icon>
             </v-card-title>
-            <img class="overlay-image" :src="'content/images/o_' + currentTutorial.thumbnail" :alt="'Thumbnail for Tutorial ' + currentTutorial.name"/>
+            <img class="overlay-image" :src="getOverlayTumbnailSrc(currentTutorial)" :alt="'Thumbnail for Tutorial ' + currentTutorial.name"/>
             <div class="ml-4 mt-2">
                 <v-btn color="blue" v-if="currentTutorial.article" :to="'/article/' + currentTutorial.name" class="mr-2 white--text">
                     <v-icon left>mdi-script-text-outline</v-icon> Article Version
@@ -37,6 +37,7 @@
 
 <script>
 import FImage from '../components/FImage.vue'
+import { getImageUrl } from '../url'
 
 export default {
     name: 'Tutorials',
@@ -47,6 +48,11 @@ export default {
     data: function() {
         return {
             currentTutorial: null
+        }
+    },
+    methods: {
+        getOverlayTumbnailSrc(tutorial){
+            return getImageUrl(tutorial, 800)
         }
     }
 }

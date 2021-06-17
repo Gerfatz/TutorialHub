@@ -13,14 +13,14 @@
           <h2 class="text-center">Tools Used</h2>
           <div class="d-flex justify-center">
             <table>
-              <tr><a src="https://github.com/Gerfatz/TutorialHub">Github</a></tr>
-              <tr><a src="https://www.gimp.org/">GIMP</a></tr>
-              <tr><a src="https://www.blackmagicdesign.com/products/davinciresolve/">DaVinci Resolve 17</a></tr>
-              <tr><a src="https://code.visualstudio.com/">Visual Studio Code</a></tr>
-              <tr><a src="https://inkscape.org/">Inkscape</a></tr>
-              <tr><a src="https://www.ffmpeg.org/">FFMPEG</a></tr>
-              <tr><a src="https://vuejs.org/">vue.js</a></tr>
-              <tr><a src="https://vuetifyjs.com/en/">vuetify</a></tr>
+              <tr><a href="https://github.com/Gerfatz/TutorialHub" target="_blank">Github</a></tr>
+              <tr><a href="https://www.gimp.org/" target="_blank">GIMP</a></tr>
+              <tr><a href="https://www.blackmagicdesign.com/products/davinciresolve/" target="_blank">DaVinci Resolve 17</a></tr>
+              <tr><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></tr>
+              <tr><a href="https://inkscape.org/" target="_blank">Inkscape</a></tr>
+              <tr><a href="https://www.ffmpeg.org/" target="_blank">FFMPEG</a></tr>
+              <tr><a href="https://vuejs.org/" target="_blank">vue.js</a></tr>
+              <tr><a href="https://vuetifyjs.com/en/" target="_blank">vuetify</a></tr>
             </table>
           </div>
       </div>
